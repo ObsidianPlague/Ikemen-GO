@@ -1,4 +1,4 @@
-module github.com/ikemen-engine/Ikemen-GO
+module github.com/ObsidianPlague/Ikemen-GO@lua-networking-funcs
 
 go 1.21
 
