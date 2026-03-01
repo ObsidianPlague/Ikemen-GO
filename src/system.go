@@ -21,7 +21,7 @@ import (
 
 	//glfont "github.com/ikemen-engine/glfont"
 	lua "github.com/yuin/gopher-lua"
-	"github.com/teejaded/gluasocket"
+	"gitlab.com/megalithic-llc/gluasocket"
 )
 
 const (
