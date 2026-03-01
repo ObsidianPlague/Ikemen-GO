@@ -21,6 +21,7 @@ import (
 
 	//glfont "github.com/ikemen-engine/glfont"
 	lua "github.com/yuin/gopher-lua"
+	"gitlab.com/megalithic-llc/gluasocket"
 )
 
 const (
@@ -459,6 +460,10 @@ func (s *System) init(w, h int32) *lua.LState {
 	l := lua.NewState()
 	l.Options.IncludeGoStackTrace = true
 	l.OpenLibs()
+	
+	gluasocket.Preload(l)
+	l.DoString("socket = require('socket')")
+	
 	s.resetRemapInput()
 	for i := range s.stringPool {
 		s.stringPool[i] = *NewStringPool()
